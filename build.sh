@@ -9,6 +9,10 @@ error() {
     fi
 }
 
+tag() {
+    docker tag ${1} $(echo $DOCKER_USERNAME)/${1}
+}
+
 build() {
     docker build -t ${1} .
 }
@@ -34,6 +38,8 @@ for autom in ${AUTOM[@]}; do
     cd ${autom}
     error
     build ${autom}
+    error
+    tag ${autom}
     error
     push ${autom}
     error
