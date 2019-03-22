@@ -1,17 +1,5 @@
 dist: trusty
 
-sudo: required
-
-language: python
-
-os:
-  - linux
-
-python:
-  - '3.6'
-
-install: pip install -U pip 
-
 script: python -c "print('Olá, mundo!')"
 
 before_deploy:
