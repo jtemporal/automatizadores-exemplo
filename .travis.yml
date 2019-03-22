@@ -12,8 +12,6 @@ python:
 
 install: pip install -U pip 
 
-script: python -c "print('Olá, mundo!')"
-
 before_deploy:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker pull python:3-slim
