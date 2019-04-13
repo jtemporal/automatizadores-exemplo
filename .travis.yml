@@ -1,6 +1,6 @@
 dist: trusty
 
-script: python -c "print('Olá, mundo!')"
+script: skip
 
 before_deploy:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
